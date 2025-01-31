@@ -7,6 +7,7 @@ import OtherCounter from './components/OtherCounter'
 import Calculo from './components/Calculo'
 import CounterUserReducer from './components/CounterUserReducer'
 import LoginForm from './components/LoginForm'
+import RenderizadoCondicionado from './components/RenderizadoCondicionado'
 
 const App = () => {
 
@@ -29,6 +30,10 @@ const App = () => {
             <h3>Using useReducer</h3>
             <CounterUserReducer />
             <LoginForm />
+            <h3>Renderizado Condicionado</h3>
+            <h6>Operador Ternario</h6>
+            <RenderizadoCondicionado />
+
         </div>
         </>
     )
