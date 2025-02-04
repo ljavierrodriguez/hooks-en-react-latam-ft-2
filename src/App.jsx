@@ -8,6 +8,8 @@ import Calculo from './components/Calculo'
 import CounterUserReducer from './components/CounterUserReducer'
 import LoginForm from './components/LoginForm'
 import RenderizadoCondicionado from './components/RenderizadoCondicionado'
+import FocusInput from './components/FocusInput'
+import Gallery from './components/Gallery'
 
 const App = () => {
 
@@ -17,6 +19,8 @@ const App = () => {
         <>
         <h1>React Hooks</h1>
         <div>
+            <h3>Using useRef</h3>
+            <Gallery />
             <h3>Using useState:</h3>
             <Counter />
             <Search />
@@ -33,6 +37,8 @@ const App = () => {
             <h3>Renderizado Condicionado</h3>
             <h6>Operador Ternario</h6>
             <RenderizadoCondicionado />
+            <h3>Using useRef</h3>
+            <FocusInput />
 
         </div>
         </>
