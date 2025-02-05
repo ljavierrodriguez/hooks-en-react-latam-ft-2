@@ -1,6 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+const ComponentA = () => {
+    return (
+        <h1>Component A</h1>
+    )
+}
+
+const ComponentB = () => {
+    return (
+        <h1 className="text-danger">Component B</h1>
+    )
+}
+
 
 const RenderizadoCondicionado = () => {
+
+    const [matriz, setMatriz] = useState([
+        [null, null, null],
+        [null, null, null],
+        [null, null, null]
+    ])
+    
+    const [arreglo, setArreglo] = useState([null, null, null, null, null, null, null, null, null])
 
     const [show, setShow] = useState(false)
     const [error, setError] = useState(null)
@@ -12,6 +33,18 @@ const RenderizadoCondicionado = () => {
     condicion && return
 
     */
+
+    useEffect(() => {
+        jugar()
+    }, [])
+
+    const jugar = () => {
+        const newArreglo = [...arreglo]
+        newArreglo[4] = null
+        setArreglo(newArreglo)
+    }
+
+
     return (
         <div>
 
@@ -22,12 +55,20 @@ const RenderizadoCondicionado = () => {
             {
                 show ? (
                     <p>Contenido Oculto</p>
-                ):(
+                ) : (
                     <button onClick={() => setShow(!show)}>Mostrar Contenido Oculto</button>
                 )
             }
 
-            <button onClick={() => setError({ message: 'Ha ocurrido un error!'})}>Crear Error</button>
+            {
+                show ? (
+                    <ComponentA />
+                ) : (
+                    <ComponentB />
+                )
+            }
+
+            <button onClick={() => setError({ message: 'Ha ocurrido un error!' })}>Crear Error</button>
 
             {
                 !!error && (
@@ -40,3 +81,6 @@ const RenderizadoCondicionado = () => {
 }
 
 export default RenderizadoCondicionado
+
+
+

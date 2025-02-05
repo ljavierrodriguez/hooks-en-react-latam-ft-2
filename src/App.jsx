@@ -10,6 +10,7 @@ import LoginForm from './components/LoginForm'
 import RenderizadoCondicionado from './components/RenderizadoCondicionado'
 import FocusInput from './components/FocusInput'
 import Gallery from './components/Gallery'
+import ControlledInputs from './components/ControlledInputs'
 
 const App = () => {
 
@@ -17,7 +18,8 @@ const App = () => {
 
     return (
         <>
-        <h1>React Hooks</h1>
+        <ControlledInputs />
+        {/* <h1>React Hooks</h1>
         <div>
             <h3>Using useRef</h3>
             <Gallery />
@@ -40,7 +42,7 @@ const App = () => {
             <h3>Using useRef</h3>
             <FocusInput />
 
-        </div>
+        </div> */}
         </>
     )
 }

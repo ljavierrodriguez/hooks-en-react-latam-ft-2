@@ -25,17 +25,6 @@ const Gallery = () => {
                     <img src="https://picsum.photos/id/239/400/400" onClick={handleClick} />
                 </div>
             </div>
-
-            <ul>
-                {
-                    state.songs.map((song) => {
-                        return (
-                            <li>{song.name}</li>
-                        )
-                    })
-                }
-            </ul>
-
         </>
     )
 }
